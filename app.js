@@ -1,6 +1,7 @@
 // create an express app
 const express = require("express")
 const app = express()
+const url = require("url")
 
 // use the express-static middleware
 app.use(express.static("public"))
@@ -8,7 +9,8 @@ app.use(express.static("public"))
 // define the first route
 app.get("/", function (req, res) {
   res.send("<h1>Hello World!</h1>")
-  res.send(req.url)
+  var q = url.parse(req,true)
+  res.send(q.pathname)
 })
 
 // start the server listening for requests
