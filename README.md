@@ -1,4 +1,5 @@
-# This is a simple webpage using nodeJS and express that prints given information to the screen
+# URLPrinter
+## A simple webpage using nodeJS and express that prints given information to the screen
 ### Usage
 Any URL encoded string following ?print= will be printed to the screen with no formatting.
 
